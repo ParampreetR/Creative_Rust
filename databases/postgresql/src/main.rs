@@ -10,7 +10,7 @@ struct SaleWithProduct {
 }
 
 fn connect_db() -> Result<Client,Error> {
-    let mut conn = Client::connect("postgres://postgres:raja.6789@localhost/myrust", NoTls)?;
+    let mut conn = Client::connect("postgres://postgres:mypass123@localhost/myrust", NoTls)?;
     conn.execute("DROP TABLE Sales", &[])?;
     conn.execute("DROP TABLE Products", &[])?;
     conn.execute(
